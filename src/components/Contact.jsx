@@ -13,15 +13,6 @@ const countryCodes = [
   { code: '+34', label: 'Spain' },
   { code: '+55', label: 'Brazil' },];
 
-const requirementsOptions = [
-  'HR Consulting',
-  'Digital Marketing',
-  'Web Development',
-  'UI/UX and Mobile Apps',
-  'Custom App',
-  'Others',
-];
-
 const formVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -148,29 +139,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Requirements dropdown */}
-          <motion.div variants={formVariants}>
-            <label htmlFor="requirement" className="block text-gray-700 font-medium mb-1">
-              Requirement
-            </label>
-            <select
-              name="requirement"
-              id="requirement"
-              value={form.requirement}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-            >
-              <option value="" disabled>
-                Select your requirement
-              </option>
-              {requirementsOptions.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </motion.div>
 
           {/* Message */}
           <motion.div variants={formVariants}>
